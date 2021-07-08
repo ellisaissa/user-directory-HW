@@ -2,18 +2,16 @@
 import './App.css';
 
 import React from "react";
-import Header from "./components/Header";
-import EmployeeResults from "./components/Results";
+// import Header from "header.js";
+import EmployeeResults from "./components/results";
 
 function App() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <EmployeeResults />
     </div>
   );
 }
-
-export default App;
 
 export default App;

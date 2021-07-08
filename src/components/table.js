@@ -1,6 +1,6 @@
 import React from "react";
-import Container from "./Container";
-import * as moment from "moment";
+import Container from "./container";
+
 
 function Table(props) {
   const { employees, matchSearch } = props;
@@ -51,7 +51,7 @@ function Table(props) {
               <th scope="col">Location</th>
               <th scope="col">Phone</th>
               <th scope="col">Email</th>
-              <th scope="col">Birthday(MM/DD/YYY)</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -70,10 +70,6 @@ function Table(props) {
 
               const email = employee.email;
 
-              const birthDate = moment(employee.dob.date).format(
-                "MM/DD/YYYY"
-              );
-
               return (
                 <tr key={employee.login.username}>
                   <th scope="row">
@@ -83,7 +79,6 @@ function Table(props) {
                   <td className="align-middle">{fullLocation}</td>
                   <td className="align-middle">{phoneNumber}</td>
                   <td className="align-middle">{email}</td>
-                  <td className="align-middle">{birthDate}</td>
                 </tr>
               );
             })}
